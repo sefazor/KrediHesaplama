@@ -1,6 +1,7 @@
 function creditCalc() {
     let withdrawn, month; // Müşteri talebi tanımlandı
     let monthlyDebt, totalAmount; // Hesaplamalar tanımlandı
+    let calcBtn = document.getElementById('calcBtn');
     withdrawn=document.getElementById('withdrawn').value; // Talep edilen kredi tutarı yakalandı
     let list =document.getElementById('month'); // Vade listesi yakalandı
     monthNumber=list.options[list.selectedIndex].value; // Vade listesi içerisinde seçili değer yakalandı
@@ -26,11 +27,17 @@ function creditCalc() {
     sonuc.style.backgroundColor="#fff"
     sonuc.style.padding="40px 0"
 
-    
 
-    if(totalAmount == null) {
-        document.querySelector("#sonuc").innerHTML="Bir değer giriniz.";
-    }
+    // Input boş ise butonu aktif et, yapamadım. tekrar bakacağım.
 
-    
+    // withdrawn.addEventListener('input', function(evt){
+    //     if(withdrawn.value.lenght > 0) {
+    //         calcBtn.disabled = true;
+    //     } else {
+    //         calcBtn.disabled = false;
+    //     }
+    // });
+  
+
 };
+
